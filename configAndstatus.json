@@ -1,0 +1,10 @@
+{
+    "net":{
+        "DHCP": true,
+        "IP_adress": "192.168.88.97",
+        "Net_mask": "255.255.255.0",
+        "Gateway": "192.168.88.1",
+        "mdnsName": "playerOk"
+    }
+
+}

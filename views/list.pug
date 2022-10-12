@@ -1,0 +1,47 @@
+
+extends layout.pug
+
+
+block content
+    
+    //const parsePath = require('./assets/parsePath.js")
+
+    div(style='padding-top: 56px; padding-bottom: 56px;')
+        main.container-xxl.my-4
+            .row.justify-content-center
+                .col.col-lg-10.col-xl-8.col-xxl-8
+                   
+                    nav(aria-label='breadcrumb' class="d-flex justify-content-start") 
+                        
+                        - var block = "../"   
+                        - var tmpPath = ''
+                        each dir, index in dirs ? dirs : []
+                            if (dir != '')
+                                - tmpPath = block.repeat(dirs.length - 2 - index)
+                                a(class="breadcrumb"  href=tmpPath)  #{dir}/ 
+                                
+                                
+                            
+                    ul.list-group
+                        each file in files ? files : []
+                            li.list-group-item
+                                label.stretched-invisible-label(for='check  index')
+                                    .form-check
+                                        input.form-check-input.multi-select(type='checkbox' data-select='{{name}}' data-select-size='{{size}}' id='check{{@index}}')
+                                        span.form-check-label.d-flex.align-items-start.justify-content-between
+                                            a(href='./' + file.name + '/' class="name" ) #{file.name}
+                                            ol.align-bottom
+                                                if file.issmallimage
+                                                    span.badge.rounded-pill.picIcon pic
+                                                if file.isdirectory
+                                                    span.badge.rounded-pill.dirIcon dir
+                                                span.badge.rounded-pill.bg-secondary.dopIcon #{(file.size/(1024*1024)).toFixed(1)} MB
+                                            //span.badge.rounded-pill.bg-secondary.badge-alignment #{file.size}
+                                            
+                                            //img.mt-1(src='./' + file.name, style='max-height: 6em; max-width: 100%;')
+                        else 
+                            li.list-group-item
+                                a(href='../') ...
+
+
+    

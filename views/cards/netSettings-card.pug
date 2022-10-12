@@ -1,0 +1,27 @@
+.card(style='width: 20rem;')
+    img.align-center.card-img-top(class="center-block" src='icons/ip-address.png' style='margin-top: 1em; height: 6em; width:6em;' )
+    .card-body
+        h5.card-title Network settings
+        p.card-text
+        //| Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+    ul.list-group.list-group-flush
+        li.list-group-item 
+            .row.mb-2
+                .col
+                    span.input-group-text(style='width:5em;') DHCP
+                .col
+                    input(type='checkbox' data-toggle='switchbutton' checked='off' data-onlabel='On' data-offlabel='Off')                       
+            .input-group.mb-2
+                span#basic-addon1.input-group-text IP adress
+                input.form-control(type='text' placeholder= configAndStatus.net.IP_adress aria-label='IP_adress' aria-describedby='basic-addon1')
+            .input-group.mb-2
+                span#basic-addon1.input-group-text Net mask
+                input.form-control(type='text' placeholder= configAndStatus.net.Net_mask aria-label='Net_mask' aria-describedby='basic-addon1')
+            .input-group.mb-2
+                span#basic-addon1.input-group-text Gateway
+                input.form-control(type='text' placeholder= configAndStatus.net.Gateway aria-label='Gateway' aria-describedby='basic-addon1')
+            .input-group.mb-2
+                span#basic-addon1.input-group-text mDNS name
+                input.form-control(type='text' placeholder= configAndStatus.net.mdnsName aria-label='mdnsName' aria-describedby='basic-addon1')
+    .card-body
+        a.card-link(href='#') Save

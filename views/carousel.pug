@@ -1,0 +1,140 @@
+h1 Use Bootstrap 3&apos;s carousel to show multiple items per slide.
+  .row
+    .col-md-12
+      #theCarousel.carousel.slide.multi-item-carousel
+        .carousel-inner
+          .item.active
+            .col-xs-4
+              a(href='#1')
+                img.img-responsive(src='https://source.unsplash.com/300x300/?perth,australia')
+          .item
+            .col-xs-4
+              a(href='#1')
+                img.img-responsive(src='https://source.unsplash.com/300x300/?fremantle,australia')
+          .item
+            .col-xs-4
+              a(href='#1')
+                img.img-responsive(src='https://source.unsplash.com/300x300/?west-australia')
+          .item
+            .col-xs-4
+              a(href='#1')
+                img.img-responsive(src='https://source.unsplash.com/300x300/?perth')
+          .item
+            .col-xs-4
+              a(href='#1')
+                img.img-responsive(src='https://source.unsplash.com/300x300/?quokka,perth')
+          .item
+            .col-xs-4
+              a(href='#1')
+                img.img-responsive(src='https://source.unsplash.com/300x300/?margaretriver,australia')
+          // add  more items here
+          // Example item start:
+          .item
+            .col-xs-4
+              a(href='#1')
+                img.img-responsive(src='https://source.unsplash.com/300x300/?perth,australia&r=7')
+          // Example item end
+        a.left.carousel-control(href='#theCarousel' data-slide='prev')
+          i.glyphicon.glyphicon-chevron-left
+        a.right.carousel-control(href='#theCarousel' data-slide='next')
+          i.glyphicon.glyphicon-chevron-right
+
+
+
+          .card(style='width: 18rem;')
+                                    img.align-center.card-img-top(class="center-block" src='icons/deadline.png' style='margin-top: 1em; height: 6em; width:6em;' )
+                                    .card-body
+                                        h5.card-title Scheduler
+                                        p.card-text
+                                        //| Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                                    ul.list-group.list-group-flush
+                                        li.list-group-item                       
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text Current task
+                                                input.form-control(type='text' placeholder= 'undefined' aria-label='Current task' aria-describedby='basic-addon1')
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text Next task
+                                                input.form-control(type='text' placeholder= 'undefined' aria-label='Next task' aria-describedby='basic-addon1')
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text Gateway
+                                                input.form-control(type='text' placeholder= configAndStatus.net.Gateway aria-label='Gateway' aria-describedby='basic-addon1')
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text mDNS name
+                                                input.form-control(type='text' placeholder= configAndStatus.net.mdnsName aria-label='mdnsName' aria-describedby='basic-addon1')
+                                    .card-body
+                                        a.card-link(href='#') Save
+
+
+
+                                        _____________________________
+
+
+
+
+                                        .card(style='width: 18rem;')
+                                    img.align-center.card-img-top(class="center-block" src='icons/ip-address.png' style='margin-top: 1em; height: 6em; width:6em;' )
+                                    .card-body
+                                        h5.card-title Network settings
+                                        p.card-text
+                                        //| Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                                    ul.list-group.list-group-flush
+                                        li.list-group-item 
+                                            .row.mb-2
+                                                .col
+                                                    span.input-group-text(style='width:5em;') DHCP
+                                                .col
+                                                    input(type='checkbox' data-toggle='switchbutton' checked='off' data-onlabel='On' data-offlabel='Off')                       
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text IP adress
+                                                input.form-control(type='text' placeholder= configAndStatus.net.IP_adress aria-label='IP_adress' aria-describedby='basic-addon1')
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text Net mask
+                                                input.form-control(type='text' placeholder= configAndStatus.net.Net_mask aria-label='Net_mask' aria-describedby='basic-addon1')
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text Gateway
+                                                input.form-control(type='text' placeholder= configAndStatus.net.Gateway aria-label='Gateway' aria-describedby='basic-addon1')
+                                            .input-group.mb-2
+                                                span#basic-addon1.input-group-text mDNS name
+                                                input.form-control(type='text' placeholder= configAndStatus.net.mdnsName aria-label='mdnsName' aria-describedby='basic-addon1')
+                                    .card-body
+                                        a.card-link(href='#') Save
+                            
+
+                            +++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+                            main.container-xxl
+        .row
+            .col-md-12
+                #carousel.slide.multi-item-carousel
+                    .carousel-inner
+                        .item.active
+                            .col-xs-4
+                                a(href='#1')
+                                    img.img-responsive(src='https://source.unsplash.com/300x300/?margaretriver,australia')
+                        .item
+                            .col-xs-4
+                                a(href='#1')
+                                    img.img-responsive(src='https://source.unsplash.com/300x300/?margaretriver,australia')
+                        .item
+                            .col-xs-4
+                                a(href='#1')
+                                    img.img-responsive(src='https://source.unsplash.com/300x300/?margaretriver,australia')
+                        .item
+                            .col-xs-4
+                                a(href='#1')
+                                    img.img-responsive(src='https://source.unsplash.com/300x300/?margaretriver,australia')
+            button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next
+
+
+                =============================
+
+
+                div(style='padding-top: 56px; padding-bottom: 56px;')
